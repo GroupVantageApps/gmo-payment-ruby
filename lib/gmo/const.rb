@@ -144,7 +144,8 @@ module GMO
       :search_type           => "SearchType",
       :recurring_id          => "RecurringID",
       :charge_day            => "ChargeDay",
-      :regist_type           => "RegistType"
+      :regist_type           => "RegistType",
+      :charge_date           => "ChargeDate"
     }.freeze
 
     API_ERROR_MESSAGES_EN = {
