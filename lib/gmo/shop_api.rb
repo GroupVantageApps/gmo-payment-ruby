@@ -575,6 +575,13 @@ module GMO
         post_request name, options
       end
 
+      def search_recurring_result_file(options = {})
+        name = "SearchRecurringResultFile.idPass"
+        required = [:method, :charge_date]
+        assert_required_options(required, options)
+        post_request_recurring_result_file name, options
+      end
+
       private
 
         def api_call(name, args = {}, verb = "post", options = {})
@@ -586,7 +593,15 @@ module GMO
           end
         end
 
-    end
+      def api_call_recurring_result_file(name, args = {}, verb = "post", options = {})
+        args.merge!({ "ShopID" => @shop_id, "ShopPass" => @shop_pass })
+        api_recurring_result_file(name, args, verb, options) do |response|
+          if response.is_a?(Hash) && !response["ErrInfo"].nil?
+            raise APIError.new(response, locale)
+          end
+        end
+      end
 
+    end
   end
 end

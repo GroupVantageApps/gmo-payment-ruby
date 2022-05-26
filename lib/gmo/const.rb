@@ -145,7 +145,8 @@ module GMO
       :recurring_id          => "RecurringID",
       :charge_start_date     => "ChargeStartDate",
       :charge_day            => "ChargeDay",
-      :regist_type           => "RegistType"
+      :regist_type           => "RegistType",
+      :charge_date           => "ChargeDate"
     }.freeze
 
     API_ERROR_MESSAGES_EN = {
