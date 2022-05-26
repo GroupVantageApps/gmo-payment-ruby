@@ -143,6 +143,7 @@ module GMO
       :package_name          => "PackageName",
       :search_type           => "SearchType",
       :recurring_id          => "RecurringID",
+      :charge_start_date     => "ChargeStartDate",
       :charge_day            => "ChargeDay",
       :regist_type           => "RegistType"
     }.freeze
